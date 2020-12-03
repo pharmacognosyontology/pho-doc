@@ -7,7 +7,7 @@ pre = "<b>2. </b>"
 
 ### Chapter 2
 
-# Basics
+# Ontology
 
 Discover how the information is organized inside PHO.
 

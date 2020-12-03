@@ -7,7 +7,7 @@ pre = "<b>1. </b>"
 
 ### Chapter 1
 
-# Basics
+# Architecture
 
 Discover how the PHO is organized.
 
