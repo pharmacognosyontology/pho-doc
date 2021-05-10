@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on PHO documentation</title>
+    <link>http://pho-doc.nprod.net/architecture/</link>
+    <description>Recent content in Architecture on PHO documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://pho-doc.nprod.net/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>General architecture</title>
+      <link>http://pho-doc.nprod.net/architecture/00/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pho-doc.nprod.net/architecture/00/</guid>
+      <description> graph LR; A[Source Databases] -- B[[Importer]] B --|RDF| C[Knowledge BasePHO-KB] BIB[BibliographyDatabases] -- C O[PHOOntology] -.- B C -- D[[Converter]] D --|JSON| PHOLR[InterfacePHO-LR] O -.- PHOLR O -.- C TS[(Triple StoreRDF4J)] -- C SQL[(Relational DBPostgreSQL)] -- C SOLR[(Search DBSOLR)] -- PHOLR style TS fill:#f9f,stroke:#333,stroke-width:0.5px style SQL fill:#f9f,stroke:#333,stroke-width:0.5px style SOLR fill:#f9f,stroke:#333,stroke-width:0.5px style O fill:#ff9,stroke:#333,stroke-width:0.5px style C fill:#ff9,stroke:#333,stroke-width:0.5px style PHOLR fill:#ff9,stroke:#333,stroke-width:0.5px  </description>
+    </item>
+    
+  </channel>
+</rss>

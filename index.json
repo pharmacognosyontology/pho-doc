@@ -1,0 +1,92 @@
+[
+{
+	"uri": "http://pho-doc.nprod.net/architecture/",
+	"title": "Architecture",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 1 Architecture Discover how the PHO is organized.\n"
+},
+{
+	"uri": "http://pho-doc.nprod.net/ontology/00-evidences/",
+	"title": "Evidences",
+	"tags": [],
+	"description": "",
+	"content": "Most of the information in PHO is organized around the concept of Evidences as stated in the Evidence Ontology\nWe have evidences regarding:\n The activity of compounds and extracts (in vivo, in vitro, in humans) The reported (ethno)medical use of compounds, extracts and preparations The isolation of compounds The structure elucidation of compounds  "
+},
+{
+	"uri": "http://pho-doc.nprod.net/architecture/00/",
+	"title": "General architecture",
+	"tags": [],
+	"description": "",
+	"content": " graph LR; A[Source Databases] -- B[[Importer]] B --|RDF| C[Knowledge BasePHO-KB] BIB[BibliographyDatabases] -- C O[PHOOntology] -.- B C -- D[[Converter]] D --|JSON| PHOLR[InterfacePHO-LR] O -.- PHOLR O -.- C TS[(Triple StoreRDF4J)] -- C SQL[(Relational DBPostgreSQL)] -- C SOLR[(Search DBSOLR)] -- PHOLR style TS fill:#f9f,stroke:#333,stroke-width:0.5px style SQL fill:#f9f,stroke:#333,stroke-width:0.5px style SOLR fill:#f9f,stroke:#333,stroke-width:0.5px style O fill:#ff9,stroke:#333,stroke-width:0.5px style C fill:#ff9,stroke:#333,stroke-width:0.5px style PHOLR fill:#ff9,stroke:#333,stroke-width:0.5px  "
+},
+{
+	"uri": "http://pho-doc.nprod.net/tools/00_import/",
+	"title": "Import into the triple-store",
+	"tags": [],
+	"description": "",
+	"content": "We have several tools to import data inside PHO-KB.\nimporter.MainKt This tool imports the data from LOTUS and Napralert inside a new Triple-store: data/pho_processed.\nCurrently with regard to bioactivities, it imports only pain related evidences from Napralert for demonstration purpose.\ngraph LR; LOTUS[LOTUS] -- TI[[Taxonomy Importer]] N[NAPRALERT] -- TI TI --|Aligns with| GNFinder TI --|Harmonized taxonomical data| TS[(Triple StoreRDF4J)] subgraph Types Importer RI[[Results Types Importer]] AI[[Activities Types Importer]] ETI[[Evidences Types Importer]] end N -- RI RI -- TS N -- AI AI -- TS N -- ETI ETI -- TS N -- PI[[Pain Evidences Importer]] PI -- TS style TS fill:#f9f,stroke:#333,stroke-width:0.5px  "
+},
+{
+	"uri": "http://pho-doc.nprod.net/ontology/",
+	"title": "Ontology",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2 Ontology Discover how the information is organized inside PHO.\n"
+},
+{
+	"uri": "http://pho-doc.nprod.net/queries/00-taxonomy/",
+	"title": "Taxonomy",
+	"tags": [],
+	"description": "",
+	"content": "PREFIX rdf: \u0026lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#\u0026gt; SELECT * WHERE { ?sub \u0026lt;http://purl.obolibrary.org/obo/TAXRANK_0000004\u0026gt; ?family; \u0026lt;http://purl.obolibrary.org/obo/TAXRANK_0000005\u0026gt; ?genus ; \u0026lt;http://purl.obolibrary.org/obo/TAXRANK_0000006\u0026gt; ?species. SERVICE \u0026lt;/api/sparql/taxonomy\u0026gt; { } } LIMIT 10 "
+},
+{
+	"uri": "http://pho-doc.nprod.net/tools/",
+	"title": "Tools",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 3 Tools Discover what are the tools used to interact with PHO.\n"
+},
+{
+	"uri": "http://pho-doc.nprod.net/queries/",
+	"title": "Useful queries",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 4 Useful queries Discover information inside PHO.\n"
+},
+{
+	"uri": "http://pho-doc.nprod.net/tools/01_convertforsolr/",
+	"title": "Convert for SOLR",
+	"tags": [],
+	"description": "",
+	"content": "We need to create json files for SOLR.\n"
+},
+{
+	"uri": "http://pho-doc.nprod.net/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "PHO Internal documentation This website is used to document how the internal parts of PHO are connected together.\n"
+},
+{
+	"uri": "http://pho-doc.nprod.net/page-top/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Hullo\n"
+},
+{
+	"uri": "http://pho-doc.nprod.net/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://pho-doc.nprod.net/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

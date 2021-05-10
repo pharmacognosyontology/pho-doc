@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://pho-doc.nprod.net/architecture/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/ontology/00-evidences/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/architecture/00/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/tools/00_import/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/ontology/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/queries/00-taxonomy/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/tools/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/queries/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/tools/01_convertforsolr/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/page-top/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/categories/</loc>
+  </url><url>
+    <loc>http://pho-doc.nprod.net/tags/</loc>
+  </url>
+</urlset>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHO documentation</title>
+    <link>http://pho-doc.nprod.net/</link>
+    <description>Recent content on PHO documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://pho-doc.nprod.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Evidences</title>
+      <link>http://pho-doc.nprod.net/ontology/00-evidences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pho-doc.nprod.net/ontology/00-evidences/</guid>
+      <description>Most of the information in PHO is organized around the concept of Evidences as stated in the Evidence Ontology
+We have evidences regarding:
+ The activity of compounds and extracts (in vivo, in vitro, in humans) The reported (ethno)medical use of compounds, extracts and preparations The isolation of compounds The structure elucidation of compounds  </description>
+    </item>
+    
+    <item>
+      <title>General architecture</title>
+      <link>http://pho-doc.nprod.net/architecture/00/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pho-doc.nprod.net/architecture/00/</guid>
+      <description> graph LR; A[Source Databases] -- B[[Importer]] B --|RDF| C[Knowledge BasePHO-KB] BIB[BibliographyDatabases] -- C O[PHOOntology] -.- B C -- D[[Converter]] D --|JSON| PHOLR[InterfacePHO-LR] O -.- PHOLR O -.- C TS[(Triple StoreRDF4J)] -- C SQL[(Relational DBPostgreSQL)] -- C SOLR[(Search DBSOLR)] -- PHOLR style TS fill:#f9f,stroke:#333,stroke-width:0.5px style SQL fill:#f9f,stroke:#333,stroke-width:0.5px style SOLR fill:#f9f,stroke:#333,stroke-width:0.5px style O fill:#ff9,stroke:#333,stroke-width:0.5px style C fill:#ff9,stroke:#333,stroke-width:0.5px style PHOLR fill:#ff9,stroke:#333,stroke-width:0.5px  </description>
+    </item>
+    
+    <item>
+      <title>Import into the triple-store</title>
+      <link>http://pho-doc.nprod.net/tools/00_import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pho-doc.nprod.net/tools/00_import/</guid>
+      <description>We have several tools to import data inside PHO-KB.
+importer.MainKt This tool imports the data from LOTUS and Napralert inside a new Triple-store: data/pho_processed.
+Currently with regard to bioactivities, it imports only pain related evidences from Napralert for demonstration purpose.
+graph LR; LOTUS[LOTUS] -- TI[[Taxonomy Importer]] N[NAPRALERT] -- TI TI --|Aligns with| GNFinder TI --|Harmonized taxonomical data| TS[(Triple StoreRDF4J)] subgraph Types Importer RI[[Results Types Importer]] AI[[Activities Types Importer]] ETI[[Evidences Types Importer]] end N -- RI RI -- TS N -- AI AI -- TS N -- ETI ETI -- TS N -- PI[[Pain Evidences Importer]] PI -- TS style TS fill:#f9f,stroke:#333,stroke-width:0.</description>
+    </item>
+    
+    <item>
+      <title>Taxonomy</title>
+      <link>http://pho-doc.nprod.net/queries/00-taxonomy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pho-doc.nprod.net/queries/00-taxonomy/</guid>
+      <description>PREFIX rdf: &amp;lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&amp;gt; SELECT * WHERE { ?sub &amp;lt;http://purl.obolibrary.org/obo/TAXRANK_0000004&amp;gt; ?family; &amp;lt;http://purl.obolibrary.org/obo/TAXRANK_0000005&amp;gt; ?genus ; &amp;lt;http://purl.obolibrary.org/obo/TAXRANK_0000006&amp;gt; ?species. SERVICE &amp;lt;/api/sparql/taxonomy&amp;gt; { } } LIMIT 10 </description>
+    </item>
+    
+    <item>
+      <title>Convert for SOLR</title>
+      <link>http://pho-doc.nprod.net/tools/01_convertforsolr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pho-doc.nprod.net/tools/01_convertforsolr/</guid>
+      <description>We need to create json files for SOLR.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://pho-doc.nprod.net/page-top/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pho-doc.nprod.net/page-top/</guid>
+      <description>Hullo</description>
+    </item>
+    
+  </channel>
+</rss>
